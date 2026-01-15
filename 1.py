@@ -10,7 +10,7 @@ def water_jug_dfs(cap1,cap2,target):
         visited.add((jug1,jug2))
         path.append((jug1,jug2))
 
-        if(jug1==target or jug2 == target):
+        if jug1==target or jug2 == target:
             return True
 
         if dfs(cap1,jug2):
@@ -43,12 +43,12 @@ def water_jug_dfs(cap1,cap2,target):
 
 jug1_capacity = 4
 jug2_capacity = 3
-target = 2
+target_amount = 2
 
-solution_path = water_jug_dfs(jug1_capacity,jug2_capacity,target)
+solution_path = water_jug_dfs(jug1_capacity,jug2_capacity,target_amount)
 
 if solution_path:
-    print(f"Solution found for the jugs with capacity {jug1_capacity} and {jug2_capacity}, targeting {target}:")
+    print(f"Solution found for the jugs with capacity {jug1_capacity} and {jug2_capacity}, targeting {target_amount}:")
 
     for i, (j1,j2) in enumerate(solution_path):
         print(f"Step {i+1}: Jug 1 = {j1}, Jug 2 = {j2}")
