@@ -1,4 +1,5 @@
 """7 - Solve the Traveling Salesman Problem using a heuristic method like nearest neighbour and calculate the total cost."""
+
 from itertools import permutations
 
 def calculate_distance(route, distances):
