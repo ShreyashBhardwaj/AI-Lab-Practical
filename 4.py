@@ -1,3 +1,5 @@
+"""4 - Write a program to find the shortest path using the A search algorithm with a suitable heuristic"""
+
 g = {'A': 0}  # Cost from start
 h = {'A': 3, 'B': 2, 'C': 1, 'D': 0}  # Heuristic
 p = {'A': None}  # Parent pointers
