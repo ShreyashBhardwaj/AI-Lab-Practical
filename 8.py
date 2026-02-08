@@ -39,6 +39,10 @@ final_facts = forward_chaining(facts.copy(), rules) # Use a copy to avoid modify
 print("\nFinal inferred facts:")
 for fact in final_facts:
     print(fact)
+
+
+
+
 # Backward Chaining
 # Knowledge base: Rules
 rules = {
