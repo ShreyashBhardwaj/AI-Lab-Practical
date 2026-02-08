@@ -1,12 +1,9 @@
 # Develop a Tic-Tac-Toe game for two players using the Minimax algorithm for intelligent moves.
 
 board = [' '] * 9
-
-
 def print_board():
     print(
         f"{board[0]}|{board[1]}|{board[2]}\n-+-+-\n{board[3]}|{board[4]}|{board[5]}\n-+-+-\n{board[6]}|{board[7]}|{board[8]}")
-
 
 def check_win(p):
 
@@ -16,17 +13,16 @@ def check_win(p):
     return False
 
 player = 'X'
-
 for _ in range(9):
     print_board()
     move = int(input(f"{player}'s turn (0-8): "))
     if board[move] == ' ':
         board[move] = player
         if check_win(player):
-            print_board();
-            print(player, "wins!");
+            print_board()
+            print(player, "wins!")
             break
         player = 'O' if player == 'X' else 'X'
     else:
-        print_board();
+        print_board()
         print("Draw!")
