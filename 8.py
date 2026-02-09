@@ -29,7 +29,7 @@ def forward_chaining(facts, rules):
             all_conditions_met = all(condition in facts for condition in rule["conditions"])
             # If conditions are met and the conclusion is not already a fact, add it
             if all_conditions_met and rule["conclusion"] not in facts:
-                facts.add(rule["conclusion"])
+                facts.add(rule['conclusion'])
                 new_facts_inferred = True
                 print(f"Inferred: {rule['conclusion']}")
     return facts
