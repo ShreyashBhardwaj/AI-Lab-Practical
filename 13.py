@@ -1,4 +1,5 @@
 # Write a function that takes (01, 02, Li, La) and outputs (x, y) of the end effector.
+# Done
 
 import math
 def forward_kinematics_2dof(q1, q2, l1, l2):

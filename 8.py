@@ -1,46 +1,46 @@
 # Write a rule-based program to perform either forward chaining or backward chaining inference.
-
-#Forward Chaining
-# Define initial facts
-facts = {"has_fever", "has_cough"}
-# Define rules as a list of dictionaries
-# Each rule has a 'conditions' list and a 'conclusion' string
-rules = [
-    {
-    "conditions": ["has_fever", "has_cough"],
-    "conclusion": "has_flu"
-    },
-    {
-    "conditions": ["has_flu"],
-    "conclusion": "needs_rest"
-    },
-    {
-    "conditions": ["has_fever"],
-    "conclusion": "might_have_infection"
-    }
-]
-# Forward chaining inference engine
-def forward_chaining(facts, rules):
-    new_facts_inferred = True
-    while new_facts_inferred:
-        new_facts_inferred = False
-        for rule in rules:
-            # Check if all conditions of the rule are present in the facts
-            all_conditions_met = all(condition in facts for condition in rule["conditions"])
-            # If conditions are met and the conclusion is not already a fact, add it
-            if all_conditions_met and rule["conclusion"] not in facts:
-                facts.add(rule['conclusion'])
-                new_facts_inferred = True
-                print(f"Inferred: {rule['conclusion']}")
-    return facts
-
-# Run the forward chaining
-final_facts = forward_chaining(facts.copy(), rules) # Use a copy to avoid modifying the original set
-print("\nFinal inferred facts:")
-for fact in final_facts:
-    print(fact)
-
-
+#
+# #Forward Chaining
+# # Define initial facts
+# facts = {"has_fever", "has_cough"}
+# # Define rules as a list of dictionaries
+# # Each rule has a 'conditions' list and a 'conclusion' string
+# rules = [
+#     {
+#     "conditions": ["has_fever", "has_cough"],
+#     "conclusion": "has_flu"
+#     },
+#     {
+#     "conditions": ["has_flu"],
+#     "conclusion": "needs_rest"
+#     },
+#     {
+#     "conditions": ["has_fever"],
+#     "conclusion": "might_have_infection"
+#     }
+# ]
+# # Forward chaining inference engine
+# def forward_chaining(facts, rules):
+#     new_facts_inferred = True
+#     while new_facts_inferred:
+#         new_facts_inferred = False
+#         for rule in rules:
+#             # Check if all conditions of the rule are present in the facts
+#             all_conditions_met = all(condition in facts for condition in rule["conditions"])
+#             # If conditions are met and the conclusion is not already a fact, add it
+#             if all_conditions_met and rule["conclusion"] not in facts:
+#                 facts.add(rule['conclusion'])
+#                 new_facts_inferred = True
+#                 print(f"Inferred: {rule['conclusion']}")
+#     return facts
+#
+# # Run the forward chaining
+# final_facts = forward_chaining(facts.copy(), rules) # Use a copy to avoid modifying the original set
+# print("\nFinal inferred facts:")
+# for fact in final_facts:
+#     print(fact)
+#
+#
 
 
 # Backward Chaining
@@ -50,7 +50,6 @@ rules = {
 "measles": ["fever", "rash"],
 "viral_infection": ["headache", "fever"]
 }
-
 # Facts known so far
 facts = {}
 # Function to ask user about a symptom

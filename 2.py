@@ -1,5 +1,5 @@
 from collections import deque
-
+# Can Write
 
 def is_valid(m, c):
     """Check if missionaries and cannibals on a bank form a valid state."""

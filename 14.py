@@ -1,5 +1,5 @@
 # Implement backward chaining to derive diagnoses from user symptom input.
-
+# Done
 rules = {
 "flu": ["fever", "cough"],
 "measles": ["fever", "rash"],

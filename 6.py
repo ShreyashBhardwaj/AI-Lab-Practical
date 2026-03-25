@@ -1,5 +1,6 @@
 """6 - Solve the 8-Queens problem using backtracking and display the final board arrangement."""
 #Done
+
 def q(c):
     if c == 8:
         for r in b:

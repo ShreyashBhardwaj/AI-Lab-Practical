@@ -1,4 +1,5 @@
 """5 - Solve a problem using the AO search algorithm on an AND-OR graph and show the solution path."""
+# Done
 
 graph = {
     'A': [['B', 'C'], ['D']],  # A has two choices: AND(B,C) or OR(D)

@@ -1,3 +1,5 @@
+# Write a program to solve the Water Jug problem using Depth-First Search (DFS) and display the steps from the start to the goal state.
+# Done
 def water_jug_dfs(cap1,cap2,target):
 
     visited = set()
